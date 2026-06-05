@@ -59,41 +59,6 @@ export default function About() {
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="section-tag mb-4">About Us</span>
           <h2 className="section-heading mt-4 mb-4">Where Data Meets <span className="text-gradient-cyan">Intelligence</span></h2>
-          <p className="max-w-2xl mx-auto text-slate-400 text-lg leading-relaxed">
-            We are a boutique AI & Data Analytics agency transforming complex data into clear strategy, automated insights, and intelligent products.
-          </p>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className={`transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-8 card-glow h-full">
-              <h3 className="text-xl font-semibold text-white mb-4">Our Story</h3>
-              <div className="space-y-4 text-slate-400 leading-relaxed">
-                <p>Founded by Mariam Mamdouh, the agency was born from a conviction that most businesses are sitting on untapped gold — their data.</p>
-                <p>Today the agency operates as a full-service data partner: we design ETL pipelines, build predictive ML models, and integrate AI directly into client workflows.</p>
-              </div>
-              <ul className="mt-6 space-y-3">
-                {highlights.map(item => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-slate-300">
-                    <CheckCircle size={16} className="text-emerald-400 mt-0.5 shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className={`space-y-4 transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-            {skillCategories.map(({ icon: Icon, label, color, borderColor, bgColor, skills }) => (
-              <div key={label} className={`rounded-xl border ${borderColor} ${bgColor} p-6 transition-all duration-200 card-glow-hover`}>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`p-2 rounded-lg bg-slate-900 border ${borderColor}`}><Icon size={18} className={color} /></div>
-                  <h3 className={`font-semibold text-sm ${color}`}>{label}</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {skills.map(skill => (<span key={skill} className="skill-chip">{skill}</span>))}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
