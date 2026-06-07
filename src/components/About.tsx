@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { BrainCircuit, BarChart3, Database, CheckCircle } from 'lucide-react';
 
-function useIntersection(ref: React.RefObject<Element | null>) {
+function useIntersection(ref: React.RefObject<HTMLElement | null>) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const obs = new IntersectionObserver(
